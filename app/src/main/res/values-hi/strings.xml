@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DynamicLocalization</string>
+    <string name="button_text_en">English</string>
+    <string name="button_text_hi">Hindi</string>
+    <string name="button_text_ch">Chinese</string>
+    <string name="localize_text">नमस्ते दुनिया</string>
+</resources>
