@@ -1,6 +1,5 @@
 package com.kowsar.dynamiclocalization;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.view.View;
@@ -8,7 +7,8 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
-import java.util.Locale;
+import com.kowsar.dynamiclocalization.utils.LocaleHelper;
+import com.kowsar.dynamiclocalization.view.ICommunication;
 
 public class HandleClickEvents {
     private ICommunication comm;
@@ -42,7 +42,7 @@ public class HandleClickEvents {
     }
 
     private void setLocale(String hindi) {
-        Context context =LocaleHelper.setLocale(cntext, hindi);
+        Context context = LocaleHelper.setLocale(cntext, hindi);
         if (cntext instanceof ICommunication){
             comm = (ICommunication) cntext;
             comm.updateUI(context);

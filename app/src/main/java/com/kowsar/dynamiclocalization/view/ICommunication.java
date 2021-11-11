@@ -1,4 +1,4 @@
-package com.kowsar.dynamiclocalization;
+package com.kowsar.dynamiclocalization.view;
 
 import android.content.Context;
 

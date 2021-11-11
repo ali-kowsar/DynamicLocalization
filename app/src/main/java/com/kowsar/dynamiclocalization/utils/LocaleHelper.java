@@ -1,4 +1,4 @@
-package com.kowsar.dynamiclocalization;
+package com.kowsar.dynamiclocalization.utils;
 
 import android.annotation.TargetApi;
 import android.content.Context;
