@@ -2,6 +2,7 @@
 package com.kowsar.dynamiclocalization.model.response;
 
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -9,37 +10,47 @@ public class Locale {
 
     @SerializedName("en")
     @Expose
-    private List<En> en ;
+    private En en;
     @SerializedName("hi")
     @Expose
-    private List<Hi> hi ;
-
+    private Hi hi;
     @SerializedName("zn")
     @Expose
-    private List<Zn> zn ;
+    private Zn zn;
+    @SerializedName("ar")
+    @Expose
+    private Ar ar;
 
-    public List<En> getEn() {
+    public En getEn() {
         return en;
     }
 
-    public void setEn(List<En> en) {
+    public void setEn(En en) {
         this.en = en;
     }
 
-    public List<Hi> getHi() {
+    public Hi getHi() {
         return hi;
     }
 
-    public void setHi(List<Hi> hi) {
+    public void setHi(Hi hi) {
         this.hi = hi;
     }
 
-    public List<Zn> getZn() {
+    public Zn getZn() {
         return zn;
     }
 
-    public void setZn(List<Zn> zn) {
+    public void setZn(Zn zn) {
         this.zn = zn;
+    }
+
+    public Ar getAr() {
+        return ar;
+    }
+
+    public void setAr(Ar ar) {
+        this.ar = ar;
     }
 
     @Override
@@ -48,7 +59,8 @@ public class Locale {
                 "\nen=" + en +
                 ", \nhi=" + hi +
                 ", \nzn=" + zn +
+                ", \nar=" + ar +
                 '}';
     }
-
 }
+

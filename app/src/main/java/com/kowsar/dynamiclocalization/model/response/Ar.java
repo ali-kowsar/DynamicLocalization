@@ -4,7 +4,7 @@ package com.kowsar.dynamiclocalization.model.response;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Zn {
+public class Ar {
 
     @SerializedName("hello_world")
     @Expose
@@ -75,7 +75,7 @@ public class Zn {
 
     @Override
     public String toString() {
-        return "Zn{" +
+        return "Ar{" +
                 "helloWorld='" + helloWorld + '\'' +
                 ", buttonHindi='" + buttonHindi + '\'' +
                 ", buttonChinese='" + buttonChinese + '\'' +
@@ -85,4 +85,3 @@ public class Zn {
                 '}';
     }
 }
-

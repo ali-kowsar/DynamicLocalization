@@ -15,10 +15,15 @@ public class Hi {
     @SerializedName("button_chinese")
     @Expose
     private String buttonChinese;
-
     @SerializedName("button_eng")
     @Expose
     private String buttonEng;
+    @SerializedName("button_text_arabic")
+    @Expose
+    private String buttonTextArabic;
+    @SerializedName("localize_text")
+    @Expose
+    private String localizeText;
 
     public String getHelloWorld() {
         return helloWorld;
@@ -52,6 +57,22 @@ public class Hi {
         this.buttonEng = buttonEng;
     }
 
+    public String getButtonTextArabic() {
+        return buttonTextArabic;
+    }
+
+    public void setButtonTextArabic(String buttonTextArabic) {
+        this.buttonTextArabic = buttonTextArabic;
+    }
+
+    public String getLocalizeText() {
+        return localizeText;
+    }
+
+    public void setLocalizeText(String localizeText) {
+        this.localizeText = localizeText;
+    }
+
     @Override
     public String toString() {
         return "Hi{" +
@@ -59,7 +80,8 @@ public class Hi {
                 ", buttonHindi='" + buttonHindi + '\'' +
                 ", buttonChinese='" + buttonChinese + '\'' +
                 ", buttonEng='" + buttonEng + '\'' +
+                ", buttonTextArabic='" + buttonTextArabic + '\'' +
+                ", localizeText='" + localizeText + '\'' +
                 '}';
     }
-
 }

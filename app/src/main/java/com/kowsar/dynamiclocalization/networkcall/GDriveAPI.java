@@ -10,6 +10,6 @@ import retrofit2.http.Url;
 
 public interface GDriveAPI {
     @Streaming
-    @GET("uc?id=1TCD9cDV65BBZw0s-nOr17-Tcj2E5_-Df&export=download")
+    @GET("uc?id=1V0-IMhFJxa97Nrxww-KhwFnYav82KxbS&export=download")
     Call<ResponseLocale> downloadFileFromGdrive(/*@Url String fileUrl*/);
 }

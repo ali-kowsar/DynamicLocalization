@@ -18,6 +18,7 @@ import retrofit2.Response;
 public class LocaleRepository {
     private final String TAG= this.getClass().getSimpleName();
     private static LocaleRepository localeRepo;
+    private MutableLiveData<ResponseLocale> responseLocaleLiveData;
 
     public static LocaleRepository getInstance(){
         if(localeRepo == null){
@@ -31,29 +32,34 @@ public class LocaleRepository {
     private LocaleRepository(){
         Log.d(TAG,"LocaleRepository(): New instance created");
         localeApi = LocaleRetrofitService.getApiService();
+        responseLocaleLiveData = new MutableLiveData<>();
     }
 
     public void fetchLocaleFile(){
+        Log.d(TAG, "fetchLocaleFile(): Enter");
 
         localeApi.downloadFileFromGdrive().enqueue(new Callback<ResponseLocale>() {
             @Override
             public void onResponse(Call<ResponseLocale> call, Response<ResponseLocale> response) {
-                Log.d(TAG, "onResponse(): getAPOD-> Response success. data=" + response.body());
+                Log.d(TAG, "onResponse(): downloadFileFromGdrive-> Response success. data=" + response.body());
                 if (response.isSuccessful()) {
-                    Log.d(TAG, "onResponse(): getAPOD-> Response success. data=" + response.body());
-                    ResponseLocale responseLocale= response.body();
-                    Log.d("Kowsar", "responseLocale ="+responseLocale);
+                    responseLocaleLiveData.postValue(response.body());
                 }else {
-                    Log.d(TAG, "onResponse():getAPOD-> Response success. data=" + response.message());
+                    Log.d(TAG, "onResponse():downloadFileFromGdrive-> Response success. data=" + response.message());
+                    responseLocaleLiveData.postValue(null);
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseLocale> call, Throwable t) {
-                Log.d(TAG, "onFailure(): getAPOD-> Response failed.");
-//                apodLiveData.postValue(null);
+                Log.d(TAG, "onFailure(): downloadFileFromGdrive-> Response failed.");
             }
         });
 
+    }
+
+    public MutableLiveData<ResponseLocale> getResponseLocaleLiveData() {
+        Log.d(TAG,"getResponseLocaleLiveData(): Enter");
+        return responseLocaleLiveData;
     }
 }
