@@ -3,5 +3,7 @@
     <string name="button_text_en">English</string>
     <string name="button_text_hi">Hindi</string>
     <string name="button_text_ch">Chinese</string>
+    <string name="button_text_arabic">Arabic</string>
+    <string name="page_title">Dynamic Localization</string>
     <string name="localize_text">مرحبا بالعالم</string>
 </resources>

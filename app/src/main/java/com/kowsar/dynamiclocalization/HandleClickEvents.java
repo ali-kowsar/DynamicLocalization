@@ -45,7 +45,7 @@ public class HandleClickEvents {
         Context context = LocaleHelper.setLocale(cntext, hindi);
         if (cntext instanceof ICommunication){
             comm = (ICommunication) cntext;
-            comm.updateUI(context);
+            comm.updateUI(context,hindi);
         }
 
     }

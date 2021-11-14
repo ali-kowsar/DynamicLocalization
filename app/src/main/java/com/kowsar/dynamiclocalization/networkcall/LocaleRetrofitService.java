@@ -7,8 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LocaleRetrofitService {
 
-//    public static String BASE_URL = "https://drive.google.com/"; //file/d/1TCD9cDV65BBZw0s-nOr17-Tcj2E5_-Df/view?usp=drivesdk";
-public static String BASE_URL = "https://drive.google.com/u/0/";//uc?id=1TCD9cDV65BBZw0s-nOr17-Tcj2E5_-Df&export=download
+    //    public static String BASE_URL = "https://drive.google.com/"; //file/d/1TCD9cDV65BBZw0s-nOr17-Tcj2E5_-Df/view?usp=drivesdk";
+    public static String BASE_URL = "https://drive.google.com/u/0/";//uc?id=1TCD9cDV65BBZw0s-nOr17-Tcj2E5_-Df&export=download
     private static Retrofit retrofit = null;
 
     public static GDriveAPI getApiService() {
