@@ -2,6 +2,7 @@ package com.kowsar.dynamiclocalization;
 
 import android.content.Context;
 import android.os.Build;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -11,6 +12,7 @@ import com.kowsar.dynamiclocalization.utils.LocaleHelper;
 import com.kowsar.dynamiclocalization.view.ICommunication;
 
 public class HandleClickEvents {
+    private  final String TAG = this.getClass().getSimpleName();
     private ICommunication comm;
 
     private Context cntext;
@@ -21,7 +23,8 @@ public class HandleClickEvents {
 
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     public void  onButtonClick( View view){
-        Toast.makeText(cntext, "Button clicked", Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"onButtonClick(): Button clicked");
+//        Toast.makeText(cntext, "Button clicked", Toast.LENGTH_SHORT).show();
         String language=null;
         switch (view.getId()){
             case R.id.button_en:
