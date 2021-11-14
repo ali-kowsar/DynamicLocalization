@@ -45,7 +45,7 @@ The File contain localize data in JSON format.
  # Extend the app
  * No need to change any logice for getting localize test from localization file.
  * Just update the server localization file after added new res id
- * To get any translated string corresponding locale, just called a method **getLocaleString(locale,"localize_text")**  with locale ('en'/'hi'/'zh'/...) and string res id(mentioned in localization file) 2 pamameters.
+ * To get any translated string corresponding locale, just called a LocaleViewModel's method **getLocaleString(locale,"localize_text")**  with locale ('en'/'hi'/'zh'/...) and string res id(mentioned in localization file) 2 pamameters.
  * If file already exist, then it return localize string.
  * Just use return localize string and set to the new added text view. 
 
