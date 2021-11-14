@@ -1,5 +1,6 @@
 # DynamicLocalization
-# The application download localization file from Google drive. The File contain localize data in JSON format.
+# The application download localization file from Google drive. 
+The File contain localize data in JSON format.
 
 # Features
 * Support **java** projects.
@@ -41,5 +42,11 @@
 * In this app, I given 4 button (Enlish,Hindi,Arabic and Chinese). When user press any button, app search corresponding localixed string to the  file.
 * If corresponding data found, then set localised string ("Hello World") to the text view.
 * If localize text not found in db, then retrieve data from android native string resources localization and set to the text view.
+ # Extend the app
+ * No need to change any logice for getting localize test from localization file.
+ * Just update the server localization file after added new res id
+ * To get any translated string corresponding locale, just called a method **getLocaleString(locale,"localize_text")**  with locale ('en'/'hi'/'zh'/...) and string res id(mentioned in localization file) 2 pamameters.
+ * If file already exist, then it return localize string.
+ * Just use return localize string and set to the new added text view. 
 
 
